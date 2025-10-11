@@ -1,0 +1,239 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+# Date created = 18:12:58  August 22, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		SD_Card_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE15F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY SD_Card
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:12:58  AUGUST 22, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name SYSTEMVERILOG_FILE SD_Card.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity SPI -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity SPI -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity SPI -section_id Top
+set_location_assignment PIN_T2 -to clk_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_50 -entity SPI
+set_location_assignment PIN_W13 -to RESET_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RESET_N -entity SPI
+set_location_assignment PIN_Y13 -to KEY_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N -entity SPI
+set_location_assignment PIN_AA18 -to wp_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to wp_n -entity SPI
+set_location_assignment PIN_AA19 -to d0_MISO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d0_MISO -entity SPI
+set_location_assignment PIN_AA20 -to cd_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to cd_n -entity SPI
+set_location_assignment PIN_Y22 -to cmd_MOSI
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to cmd_MOSI -entity SPI
+set_location_assignment PIN_W22 -to d2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d2 -entity SPI
+set_location_assignment PIN_V22 -to d3_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d3_cs -entity SPI
+set_location_assignment PIN_P22 -to d1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d1 -entity SPI
+set_location_assignment PIN_E4 -to LEDR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR -entity SPI
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity SPI -section_id Top
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE CRC7.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CRC7_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SD_Card_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_Slave.sv
+set_location_assignment PIN_M19 -to Analiz_SD_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_SD_clk
+set_location_assignment PIN_N19 -to Analiz_cmd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_cmd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RESET_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to wp_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d0_MISO
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to cd_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d3_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to d2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to cmd_MOSI
+set_global_assignment -name SYSTEMVERILOG_FILE M_CRC16.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CRC16_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_CMD_SEND.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_CMD_GET.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_Init.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_Write.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_Read.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_DATA_GET.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_DATA_SEND.sv
+set_location_assignment PIN_B21 -to Analiz_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_DATA[0]
+set_location_assignment PIN_C21 -to Analiz_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_DATA[1]
+set_location_assignment PIN_D21 -to Analiz_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_DATA[2]
+set_location_assignment PIN_E21 -to Analiz_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Analiz_DATA[3]
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_CMD.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_DATA.sv
+set_location_assignment PIN_AA17 -to SD_clk_Out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_clk_Out
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_Check_State.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card_Control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SD_Card.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_BITMAP.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_sdram_control.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_VideoAdapter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_String_Buffer.sv
+set_location_assignment PIN_B2 -to Green[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[0]
+set_location_assignment PIN_C2 -to Green[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[1]
+set_location_assignment PIN_D2 -to Green[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[2]
+set_location_assignment PIN_F2 -to Green[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Green[3]
+set_location_assignment PIN_H2 -to Red[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[0]
+set_location_assignment PIN_J2 -to Red[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[1]
+set_location_assignment PIN_M2 -to Red[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[2]
+set_location_assignment PIN_N2 -to Red[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Red[3]
+set_location_assignment PIN_P2 -to Vsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Vsync
+set_location_assignment PIN_R2 -to Hsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Hsync
+set_location_assignment PIN_U1 -to DRAM_ADDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[3]
+set_location_assignment PIN_V1 -to DRAM_ADDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[1]
+set_location_assignment PIN_W1 -to DRAM_ADDR[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[10]
+set_location_assignment PIN_Y1 -to DRAM_BA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[0]
+set_location_assignment PIN_AA1 -to DRAM_ADDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[7]
+set_location_assignment PIN_U2 -to DRAM_ADDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[2]
+set_location_assignment PIN_V2 -to DRAM_ADDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[0]
+set_location_assignment PIN_W2 -to DRAM_BA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_BA[1]
+set_location_assignment PIN_Y2 -to DRAM_ADDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[6]
+set_location_assignment PIN_V3 -to DRAM_ADDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[4]
+set_location_assignment PIN_Y3 -to DRAM_ADDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[8]
+set_location_assignment PIN_AA3 -to DRAM_CS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CS_N
+set_location_assignment PIN_AB3 -to DRAM_RAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_RAS_N
+set_location_assignment PIN_V4 -to DRAM_ADDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[5]
+set_location_assignment PIN_Y4 -to DRAM_ADDR[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[11]
+set_location_assignment PIN_AA4 -to DRAM_CAS_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CAS_N
+set_location_assignment PIN_AB4 -to DRAM_WE_N
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_WE_N
+set_location_assignment PIN_V5 -to DRAM_ADDR[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[9]
+set_location_assignment PIN_AA5 -to DRAM_LDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_LDQM
+set_location_assignment PIN_AB5 -to DRAM_DQ[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[7]
+set_location_assignment PIN_V6 -to DRAM_ADDR[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_ADDR[12]
+set_location_assignment PIN_W6 -to DRAM_CKE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CKE
+set_location_assignment PIN_Y6 -to DRAM_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_CLK
+set_location_assignment PIN_W7 -to DRAM_UDQM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_UDQM
+set_location_assignment PIN_Y7 -to DRAM_DQ[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[8]
+set_location_assignment PIN_AA7 -to DRAM_DQ[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[6]
+set_location_assignment PIN_AB7 -to DRAM_DQ[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[5]
+set_location_assignment PIN_W8 -to DRAM_DQ[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[9]
+set_location_assignment PIN_Y8 -to DRAM_DQ[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[10]
+set_location_assignment PIN_AA8 -to DRAM_DQ[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[4]
+set_location_assignment PIN_AB8 -to DRAM_DQ[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[3]
+set_location_assignment PIN_V9 -to DRAM_DQ[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[11]
+set_location_assignment PIN_AA9 -to DRAM_DQ[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[2]
+set_location_assignment PIN_AB9 -to DRAM_DQ[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[1]
+set_location_assignment PIN_V10 -to DRAM_DQ[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[12]
+set_location_assignment PIN_W10 -to DRAM_DQ[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[14]
+set_location_assignment PIN_Y10 -to DRAM_DQ[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[13]
+set_location_assignment PIN_AA10 -to DRAM_DQ[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[0]
+set_location_assignment PIN_V11 -to DRAM_DQ[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DRAM_DQ[15]
+set_location_assignment PIN_AA13 -to Blue[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[3]
+set_location_assignment PIN_AA14 -to Blue[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[2]
+set_location_assignment PIN_AA15 -to Blue[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[1]
+set_location_assignment PIN_AA16 -to Blue[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Blue[0]
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name SYSTEMVERILOG_FILE BMP_Copire.sv
+set_global_assignment -name SYSTEMVERILOG_FILE BMP_Copire_Test.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_SDRAM_Slave.sv
+set_global_assignment -name SYSTEMVERILOG_FILE M_MEMORY_BUF.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
