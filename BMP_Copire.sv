@@ -59,10 +59,10 @@ wire CheckBMPFail;
 
 
 wire [31:0] FileSize;
-wire [15:0] PixArrayOffset;
+wire [31:0] PixArrayOffset;
 
-wire [15:0] PixWidth;
-wire [15:0] PixHeight;
+wire [31:0] PixWidth;
+wire [31:0] PixHeight;
 
 
 

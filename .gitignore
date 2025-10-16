@@ -4,6 +4,8 @@
 *.log
 *.rpt
 *.qws
+*.vcd
+qqq
 
 # Folders
 db/*

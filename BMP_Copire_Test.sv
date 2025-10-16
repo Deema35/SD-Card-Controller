@@ -282,7 +282,7 @@ begin
 	endcase
 end
 
-initial  #110500 $finish;
+initial  #120500 $finish;
 
 initial
 begin
